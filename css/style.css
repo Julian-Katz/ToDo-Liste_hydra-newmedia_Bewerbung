@@ -1,0 +1,25 @@
+/* ===== Variables ===== */
+:root {
+    --clr-darkGrey: rgb(88, 88, 88);
+    --clr-lightGrey: rgb(202, 202, 202);
+    --clr-white: rgb(255, 255, 255);
+    --clr-black: black;
+    --clr-lightBlue: blue;
+    --clr-prioLow: green;
+    --clr-prioMedium: yellow;
+    --clr-proHigh: red;
+
+    --effects-dropShadow:  5px 5px 10px rgba(0, 0, 0, 0.25);
+
+    --font-main: Arial, Helvetica, sans-serif;
+}
+/* ===== Global Styles ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-main);
+    color: var(--clr-black);
+}

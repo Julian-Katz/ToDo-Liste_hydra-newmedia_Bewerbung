@@ -1,15 +1,16 @@
 /* ===== Variables ===== */
 :root {
     --clr-darkGrey: rgb(88, 88, 88);
-    --clr-lightGrey: rgb(202, 202, 202);
+    --clr-lightGrey: rgb(240, 240, 240);
     --clr-white: rgb(255, 255, 255);
     --clr-black: black;
-    --clr-lightBlue: blue;
+    --clr-lightBlue: rgb(90, 203, 231);
     --clr-prioLow: green;
     --clr-prioMedium: yellow;
     --clr-proHigh: red;
 
     --effects-dropShadow:  5px 5px 10px rgba(0, 0, 0, 0.25);
+    --effects-borderRadius: 0.2em;
 
     --font-main: Arial, Helvetica, sans-serif;
 }
@@ -22,4 +23,116 @@
 body {
     font-family: var(--font-main);
     color: var(--clr-black);
+    background: var(--clr-lightGrey);
 }
+.section-center {
+    margin: 0 auto;
+    max-width: 900px;
+}
+.btn {
+    background: var(--clr-lightBlue);
+    padding: 0.2rem 0.8rem;
+    display: inline-block;
+    border-radius: var(--effects-borderRadius);
+    box-shadow: var(--effects-dropShadow);
+    font-weight: 700;
+    cursor: pointer;
+
+    /* submit btn styles */
+    border: none;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Heading ===== */
+h1{
+    background:var(--clr-darkGrey);
+    color: var(--clr-white);
+    border-radius: var(--effects-borderRadius);
+    text-align: center;
+    padding: 0.8rem 0;
+    margin-top: 15vh;
+    box-shadow: var(--effects-dropShadow);
+}
+
+/* ===== Add Items ===== */
+.section-add-item {
+    margin-bottom: 2rem;
+}
+/* hide label */
+.hide{
+    display: none;
+}
+form{
+    display: flex;
+}
+form div{
+    width: 80%;
+}
+input {
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: var(--effects-borderRadius);
+    border: 1px solid var(--clr-black);
+}
+.text-input{
+    width: 90%;
+}
+/* align radio btns */
+.radio{
+    transform: translateY(0.3em);
+}
+.radio label{
+    margin-right: 1rem;
+}
+
+
+/* =====  ToDo Listen ===== */
+.section-2col{
+    display: flex;
+    justify-content: space-between;
+}
+.tasks-col{
+    width: 49%; 
+}
+.tasks {
+    background: var(--clr-white);
+    padding: 1rem;
+    color: var(--clr-white);
+    height: 100%;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    background: var(--clr-black);
+    margin-bottom: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: var(--effects-borderRadius);
+    box-shadow: var(--effects-dropShadow);
+
+}
+.task-element{
+    display: flex;
+}
+.task-element.btns{
+    color: var(--clr-black);
+    justify-content: right;
+}
+.task-element.infos{
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+

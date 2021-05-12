@@ -18,15 +18,21 @@
         <section class="section-add-item">
             <h2>Add new to-do-item</h2>
             <form action="">
-                <label for="to-do" class="hide">To-Do</label>
-                <input type="text" id="to-do">
-                <input type="radio" name="priority" id="low">
-                <label for="low">Low</label>
-                <input type="radio" name="priority" id="medium">
-                <label for="medium">Medium</label>
-                <input type="radio" name="priority" id="high">
-                <label for="high">High</label>
-                <input type="submit" value="Submit">
+                <div>
+                    <label for="to-do" class="hide">To-Do</label>
+                    <input type="text" id="to-do" class="text-input">
+                </div>
+                <div class="radio">
+                    <input type="radio" name="priority" id="low">
+                    <label for="low">Low</label>
+                    <input type="radio" name="priority" id="medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="priority" id="high">
+                    <label for="high">High</label>
+                </div>
+                <div>
+                    <input type="submit" value="Add new item" class="btn">
+                </div>
             </form>
         </section>
         <section class="section-2col">
@@ -34,34 +40,50 @@
                 <h2>Your current tasks</h2>
                 <div class="tasks">
                     <div class="task">
-                        <p>Task 1</p>
-                        <p>Low</p>
-                        <p>Delete</p>
-                        <p>Finished</p>
+                        <div class="task-element infos">
+                            <p>Task 1</p>
+                            <p>Low</p>
+                        </div>
+                        <div class="task-element btns">
+                            <p class="btn">Delete</p>
+                            <p class="btn">Finished</p>
+                        </div>
                     </div>
                     <div class="task">
-                        <p>Task 1</p>
-                        <p>Low</p>
-                        <p>Delete</p>
-                        <p>Finished</p>
+                        <div class="task-element infos">
+                            <p>Task 1</p>
+                            <p>Low</p>
+                        </div>
+                        <div class="task-element btns">
+                            <p class="btn">Delete</p>
+                            <p class="btn">Finished</p>
+                        </div>
                     </div>
-                </div>
             </section>
             <section class="tasks-col">
                 <h2>Your finished tasks</h2>
                 <div class="tasks">
                     <div class="task">
-                        <p>Task 1</p>
-                        <p>Low</p>
-                        <p>Delete</p>
-                        <p>Finished</p>
+                        <div class="task-element infos">
+                            <p>Task 1</p>
+                            <p>Low</p>
+                        </div>
+                        <div class="task-element btns">
+                            <p class="btn">Delete</p>
+                            <p class="btn">Finished</p>
+                        </div>
                     </div>
                     <div class="task">
-                        <p>Task 1</p>
-                        <p>Low</p>
-                        <p>Delete</p>
-                        <p>Finished</p>
+                        <div class="task-element infos">
+                            <p>Task 1</p>
+                            <p>Low</p>
+                        </div>
+                        <div class="task-element btns">
+                            <p class="btn">Delete</p>
+                            <p class="btn">Finished</p>
+                        </div>
                     </div>
+
                 </div>
             </section>
         </section>

@@ -1,8 +1,9 @@
 // Form Read Data
-let submitBtn = document.getElementById("submit-btn");
-let toDoNameInput = document.getElementById("to-do");
-let radioBtnsInput = Array.from(document.querySelectorAll(".radio input"))
-submitBtn.addEventListener("click", handleFormData);
+const form = document.getElementById("form");
+const toDoNameInput = document.getElementById("to-do");
+const radioBtnsInput = Array.from(document.querySelectorAll(".radio input"));
+const formBtn = document.getElementById("submit-btn");
+form.addEventListener("submit", handleFormData);
 
 function handleFormData(_event){
     _event.preventDefault();
@@ -14,10 +15,7 @@ function handleFormData(_event){
         }
         
     })
-    if(toDoName === "" || toDoPrio === undefined){
-    } else {
-        addListItem(toDoName, toDoPrio, currentTaskList)
-    }
+    addListItem(toDoName, toDoPrio, currentTaskList)
     // reset form
     toDoNameInput.value = "";
     radioBtnsInput.forEach(function(_radioBtn){

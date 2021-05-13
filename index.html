@@ -17,29 +17,29 @@
         </section>
         <section class="section-add-item">
             <h2>Add new to-do-item</h2>
-            <form action="">
+            <form id="form">
                 <div>
                     <label for="to-do" class="hide">To-Do</label>
                     <input type="text" id="to-do" class="text-input">
                 </div>
                 <div class="radio">
-                    <input type="radio" name="priority" id="low">
+                    <input type="radio" name="priority" id="low" value="Low">
                     <label for="low">Low</label>
-                    <input type="radio" name="priority" id="medium">
+                    <input type="radio" name="priority" id="medium" value="Medium">
                     <label for="medium">Medium</label>
-                    <input type="radio" name="priority" id="high">
+                    <input type="radio" name="priority" id="high" value="High">
                     <label for="high">High</label>
                 </div>
                 <div>
-                    <input type="submit" value="Add new item" class="btn">
+                    <button type="submit" class="btn" id="submit-btn">Add new item</button>
                 </div>
             </form>
         </section>
         <section class="section-2col">
             <section class="tasks-col">
                 <h2>Your current tasks</h2>
-                <div class="tasks">
-                    <div class="task">
+                <div class="tasks" id="current-task-list">
+                    <!-- <div class="task">
                         <div class="task-element infos">
                             <p>Task 1</p>
                             <p>Low</p>
@@ -48,45 +48,17 @@
                             <p class="btn">Delete</p>
                             <p class="btn">Finished</p>
                         </div>
-                    </div>
-                    <div class="task">
-                        <div class="task-element infos">
-                            <p>Task 1</p>
-                            <p>Low</p>
-                        </div>
-                        <div class="task-element btns">
-                            <p class="btn">Delete</p>
-                            <p class="btn">Finished</p>
-                        </div>
-                    </div>
+                    </div> -->
+                </div>
             </section>
             <section class="tasks-col">
                 <h2>Your finished tasks</h2>
-                <div class="tasks">
-                    <div class="task">
-                        <div class="task-element infos">
-                            <p>Task 1</p>
-                            <p>Low</p>
-                        </div>
-                        <div class="task-element btns">
-                            <p class="btn">Delete</p>
-                            <p class="btn">Finished</p>
-                        </div>
-                    </div>
-                    <div class="task">
-                        <div class="task-element infos">
-                            <p>Task 1</p>
-                            <p>Low</p>
-                        </div>
-                        <div class="task-element btns">
-                            <p class="btn">Delete</p>
-                            <p class="btn">Finished</p>
-                        </div>
-                    </div>
+                <div class="tasks" id="finished-task-list">
 
                 </div>
-            </section>
-        </section>
+    </div>
+    </section>
+    </section>
     </div>
 </body>
 

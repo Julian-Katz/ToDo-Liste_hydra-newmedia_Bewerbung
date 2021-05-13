@@ -120,7 +120,7 @@ input {
     padding: 0.3rem 1rem;
     border-radius: var(--effects-borderRadius);
     box-shadow: var(--effects-dropShadow);
-
+    cursor: move;
 }
 .task-element{
     display: flex;
@@ -133,6 +133,28 @@ input {
     justify-content: space-between;
     width: 50%;
 }
+/* Task Prio */
+
+.low {
+    color: var(--clr-prioLow);
+}
+.medium {
+    color: var(--clr-prioMedium);
+}
+.high {
+    color: var(--clr-proHigh);
+}
+.low,
+.medium,
+.high {
+    font-weight: 700;
+}
+/* Drag and Drop */
+.dragging{
+    opacity: 0.3;
+}
+
+
 
 
 

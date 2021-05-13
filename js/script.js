@@ -64,18 +64,17 @@ function addListItem(_taskName, _prio, _DomList){
             dragable.classList.remove("dragging")
         })
     })
-    finishedTaskList.addEventListener("dragover", function(_event){
-        _event.preventDefault();
-        const dragging = document.querySelector(".dragging");
-        finishedTaskList.appendChild(dragging);
-    })
-    currentTaskList.addEventListener("dragover", function(_event){
-        _event.preventDefault();
-        const dragging = document.querySelector(".dragging");
-        currentTaskList.appendChild(dragging);
-    })
-
 }
+finishedTaskList.addEventListener("dragover", function(_event){
+    _event.preventDefault();
+    const dragging = document.querySelector(".dragging");
+    finishedTaskList.appendChild(dragging);
+})
+currentTaskList.addEventListener("dragover", function(_event){
+    _event.preventDefault();
+    const dragging = document.querySelector(".dragging");
+    currentTaskList.appendChild(dragging);
+})
 
 
 function handleDeleteTask(_event){

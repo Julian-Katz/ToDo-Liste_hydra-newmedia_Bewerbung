@@ -1,19 +1,20 @@
 /* ===== Variables ===== */
 :root {
-    --clr-darkGrey: rgb(88, 88, 88);
-    --clr-lightGrey: rgb(240, 240, 240);
+    --clr-darkGrey: #696969;
+    --clr-lightGrey: #d3d3d3;
     --clr-white: rgb(255, 255, 255);
-    --clr-black: black;
-    --clr-lightBlue: rgb(90, 203, 231);
-    --clr-prioLow: green;
-    --clr-prioMedium: yellow;
-    --clr-proHigh: red;
+    --clr-black: rgb(0, 0, 0);
+    --clr-lightBlue: #85cff8;
+    --clr-prioLow: #9fea44;
+    --clr-prioMedium: rgb(255, 255, 0);
+    --clr-proHigh: #de0040;
 
     --effects-dropShadow:  5px 5px 10px rgba(0, 0, 0, 0.25);
     --effects-borderRadius: 0.2em;
 
     --font-main: Arial, Helvetica, sans-serif;
 }
+
 /* ===== Global Styles ===== */
 *{
     margin: 0;
@@ -38,7 +39,7 @@ body {
     font-weight: 700;
     cursor: pointer;
 
-    /* submit btn styles */
+    /* extra submit btn styles */
     border: none;
     font-family: var(--font-main);
     font-size: 1rem;
@@ -94,14 +95,13 @@ input {
     margin-right: 1rem;
 }
 
-
-/* =====  ToDo Listen ===== */
-.section-2col{
+/* =====  ToDo Lists ===== */
+.section-task-lists{
     display: flex;
     justify-content: space-between;
 }
-.tasks-col{
-    width: 49%; 
+.tasks-column{
+    width: 49%;
 }
 .tasks {
     background: var(--clr-white);
@@ -134,7 +134,11 @@ input {
     width: 50%;
 }
 /* Task Prio */
-
+.low,
+.medium,
+.high {
+    font-weight: 700;
+}
 .low {
     color: var(--clr-prioLow);
 }
@@ -143,11 +147,6 @@ input {
 }
 .high {
     color: var(--clr-proHigh);
-}
-.low,
-.medium,
-.high {
-    font-weight: 700;
 }
 /* Drag and Drop */
 .dragging{

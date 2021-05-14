@@ -12,15 +12,17 @@
 
 <body>
     <div class="section-center">
+
         <section>
             <h1>My To-Do</h1>
         </section>
+
         <section class="section-add-item">
             <h2>Add new to-do-item</h2>
             <form id="form">
                 <div>
                     <label for="to-do" class="hide">To-Do</label>
-                    <input type="text" id="to-do" class="text-input" required>
+                    <input type="text" id="to-do" class="text-input" required autocomplete="off">
                 </div>
                 <div class="radio">
                     <input type="radio" name="priority" id="low" value="Low" required>
@@ -35,29 +37,22 @@
                 </div>
             </form>
         </section>
-        <section class="section-2col">
-            <section class="tasks-col">
+
+        <section class="section-task-lists">
+            <section class="tasks-column">
                 <h2>Your current tasks</h2>
                 <div class="tasks" id="current-task-list">
-                    <!-- <div class="task">
-                        <div class="task-element infos">
-                            <p>Task 1</p>
-                            <p>Low</p>
-                        </div>
-                        <div class="task-element btns">
-                            <p class="btn">Delete</p>
-                            <p class="btn">Finished</p>
-                        </div>
-                    </div> -->
+                    <!-- current Tasks -->
                 </div>
             </section>
-            <section class="tasks-col">
+            <section class="tasks-column">
                 <h2>Your finished tasks</h2>
                 <div class="tasks" id="finished-task-list">
-
+                    <!-- finished Tasks -->
                 </div>
             </section>
         </section>
+
     </div>
 </body>
 

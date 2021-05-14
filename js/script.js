@@ -11,26 +11,25 @@ function handleFormData(_event){
     let toDoPrio;
     radioBtnsInput.forEach(function(_radioBtn){
         if(_radioBtn.checked){
-            toDoPrio = _radioBtn.value
+            toDoPrio = _radioBtn.value;
         }
-        
     })
     addListItem(toDoName, toDoPrio, currentTaskList)
     // reset form
     toDoNameInput.value = "";
     radioBtnsInput.forEach(function(_radioBtn){
-        _radioBtn.checked = false   
+        _radioBtn.checked = false;
     })
 }
-// Add Items + Delete Btn + Finished Btn
+
+// Add Task + Delete Btn + Finished Btn
 const currentTaskList = document.getElementById("current-task-list");
 const finishedTaskList = document.getElementById("finished-task-list");
 const dropAreas = [currentTaskList, finishedTaskList];
 
-
-
 function addListItem(_taskName, _prio, _DomList){
-    let task = document.createElement("div")
+    // create and add task
+    const task = document.createElement("div")
     task.classList.add("task");
     task.draggable = "true";
     task.innerHTML = `<div class="task-element infos">
@@ -53,28 +52,21 @@ function addListItem(_taskName, _prio, _DomList){
         deleteBtn.addEventListener("click", handleDeleteTask);
     })
     // Drag and Drop
+    // add class ".dragging" if element is draged
     const dragables = document.querySelectorAll(".task");
     dragables.forEach(function(dragable){
         dragable.addEventListener("dragstart", function(_event){
             dragable.classList.add("dragging");
         })
         dragable.addEventListener("dragend", function(_event){
-            dragable.classList.remove("dragging")
+            dragable.classList.remove("dragging");
         })
     })
 }
-finishedTaskList.addEventListener("dragover", function(_event){
-    _event.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    finishedTaskList.appendChild(dragging);
-})
-currentTaskList.addEventListener("dragover", function(_event){
-    _event.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    currentTaskList.appendChild(dragging);
-})
-
-
+// add element that is dragged to drop zones
+currentTaskList.addEventListener("dragover", handelDragoverList);
+finishedTaskList.addEventListener("dragover", handelDragoverList);
+//  Task Btns Event handlers
 function handleDeleteTask(_event){
     const elemntDel = _event.currentTarget.parentElement.parentElement;
     const list = _event.currentTarget.parentElement.parentElement.parentElement;
@@ -89,4 +81,10 @@ function handleFinishedTask(_event){
     const elementFinished = _event.currentTarget.parentElement.parentElement;
     currentTaskList.removeChild(elementFinished);
     finishedTaskList.appendChild(elementFinished);
+}
+// Dragover handler
+function handelDragoverList(_event) {
+    _event.preventDefault();
+    const dragging = document.querySelector(".dragging");
+    _event.currentTarget.appendChild(dragging);
 }

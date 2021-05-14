@@ -63,7 +63,7 @@ function addListItem(_taskName, _prio, _DomList){
         })
     })
 }
-// add element that is dragged to drop zones
+// List Events - dragover
 currentTaskList.addEventListener("dragover", handelDragoverList);
 finishedTaskList.addEventListener("dragover", handelDragoverList);
 //  Task Btns Event handlers
